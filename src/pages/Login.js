@@ -35,13 +35,20 @@ const HeaderStyle = styled('header')(({ theme }) => ({
   },
 }));
 
-const SectionStyle = styled(Card)(({ theme }) => ({
+const SectionStyle = styled('div')(({ theme }) => ({
   width: '100%',
-  maxWidth: 464,
+  backgroundColor: '#c8d5ff',
+  maxWidth: 700,
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
-  margin: theme.spacing(2, 0, 2, 2),
+  margin: 0,
+  img: {
+    width: 'calc(100% - 48px)',
+    height: 'calc(100% - 48px)',
+    marginLeft: '6rem',
+    marginTop: '4rem',
+  },
 }));
 
 const ContentStyle = styled('div')(({ theme }) => ({
@@ -79,10 +86,8 @@ export default function Login() {
 
         {mdUp && (
           <SectionStyle>
-            <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-              Hi, Welcome Back
-            </Typography>
-            <img src="/static/illustrations/illustration_login.png" alt="login" />
+            <img src="/svg-image/loginimg01_vhm.svg" alt="login" type="image/svg" />
+            {/* Alternative Texts */}
           </SectionStyle>
         )}
 
