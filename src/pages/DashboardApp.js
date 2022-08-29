@@ -26,8 +26,11 @@ export default function DashboardApp() {
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
-        <Typography variant="h4" sx={{ mb: 5 }}>
+        <Typography variant="h4" sx={{ mb: 2 }}>
           Heollo, Pluton admin page.
+        </Typography>
+        <Typography variant="subtitle1" sx={{ mb: 5 }}>
+          Design system으로 다양한 제작된 통계 도표를 확인할수 있습니다.
         </Typography>
 
         <Grid container spacing={3}>
@@ -49,7 +52,7 @@ export default function DashboardApp() {
 
           <Grid item xs={12} md={6} lg={8}>
             <AppWebsiteVisits
-              title="주간 방문자"
+              title="weekly visits"
               subheader="(+43%) than last year"
               chartLabels={[
                 '01/01/2003',
@@ -89,19 +92,14 @@ export default function DashboardApp() {
 
           <Grid item xs={12} md={6} lg={4}>
             <AppCurrentVisits
-              title="현재 방문자"
+              title="current visits"
               chartData={[
                 { label: 'America', value: 4344 },
                 { label: 'Asia', value: 5435 },
                 { label: 'Europe', value: 1443 },
                 { label: 'Africa', value: 4443 },
               ]}
-              chartColors={[
-                theme.palette.primary.main,
-                theme.palette.chart.blue[0],
-                theme.palette.chart.violet[0],
-                theme.palette.chart.yellow[0],
-              ]}
+              chartColors={['rgb(255, 99, 132)', 'rgb(54, 162, 235)', 'rgb(255, 205, 86)', 'rgb(75, 192, 192)']}
             />
           </Grid>
 

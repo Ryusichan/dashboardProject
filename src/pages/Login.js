@@ -1,7 +1,7 @@
 import { Link as RouterLink } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Card, Link, Container, Typography } from '@mui/material';
+import { Link, Container, Typography } from '@mui/material';
 // hooks
 import useResponsive from '../hooks/useResponsive';
 // components
@@ -35,7 +35,7 @@ const HeaderStyle = styled('header')(({ theme }) => ({
   },
 }));
 
-const SectionStyle = styled('div')(({ theme }) => ({
+const SectionStyle = styled('div')(() => ({
   width: '100%',
   backgroundColor: '#c8d5ff',
   maxWidth: 700,
